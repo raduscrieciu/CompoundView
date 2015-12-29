@@ -34,6 +34,11 @@ public class ArticleView extends RelativeLayout {
 
     private void initView(Context context) {
         inflate(context, R.layout.view_article, this);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
 
         titleTextView = (TextView) findViewById(R.id.titleTextView);
         contentTextView = (TextView) findViewById(R.id.contentTextView);
