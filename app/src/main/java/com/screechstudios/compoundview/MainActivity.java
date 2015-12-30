@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Initialize the ArticleView
         final ArticleView articleView = (ArticleView) findViewById(R.id.articleView);
 
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private void populateArticle(final ArticleView articleView) {
         articleView.setLoading(true);
 
+        // Display the article after 3 seconds.
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
